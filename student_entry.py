@@ -86,9 +86,7 @@ if authentication_status:
             
         
         df_students = pd.DataFrame(get_data_student())
-        st.write("## Show Student Dataset")
-        st.write(df_students)
-        st.write(df_students.shape)
+        
         if st.sidebar.button("Add Student"):
             get_data_student().append({"Student_ID": student_id, 
                            "Student_Name": student_name, 
@@ -96,6 +94,9 @@ if authentication_status:
                            "Student_Email": student_email,
                            "Student_Class_Name": student_class_name,
                            "Student_Subject": student_subject})
+        st.write("## Show Student Dataset")
+        st.write(df_students)
+        st.write(df_students.shape)    
         
        #####convert df to csv and save it    ###
         def convert_df(df_students):
