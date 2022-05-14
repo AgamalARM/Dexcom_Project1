@@ -48,10 +48,11 @@ if authentication_status:
             get_data_admin().append({"Admin_ID": admin_id, 
                            "Admin_Name": admin_name, 
                            "Admin_Phone": admin_phone})
+            st.write("New data is enter")
         st.write("## Show Admin Dataset")
         st.write(df_admins)
         st.write(df_admins.shape)
-        st.write("New data is enter")
+        
         
        #####convert df to csv and save it    ###
         def convert_df(df_admins):
@@ -95,10 +96,12 @@ if authentication_status:
                            "Student_Email": student_email,
                            "Student_Class_Name": student_class_name,
                            "Student_Subject": student_subject})
+            st.write("New data is enter")
+            
         st.write("## Show Student Dataset")
         st.write(df_students)
         st.write(df_students.shape)    
-        st.write("New data is enter")
+       
        #####convert df to csv and save it    ###
         def convert_df(df_students):
             return df_students.to_csv().encode('utf-8')
