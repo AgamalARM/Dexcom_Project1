@@ -51,6 +51,7 @@ if authentication_status:
         st.write("## Show Admin Dataset")
         st.write(df_admins)
         st.write(df_admins.shape)
+        st.write("New data is enter")
         
        #####convert df to csv and save it    ###
         def convert_df(df_admins):
@@ -97,7 +98,7 @@ if authentication_status:
         st.write("## Show Student Dataset")
         st.write(df_students)
         st.write(df_students.shape)    
-        
+        st.write("New data is enter")
        #####convert df to csv and save it    ###
         def convert_df(df_students):
             return df_students.to_csv().encode('utf-8')
