@@ -81,16 +81,16 @@ if authentication_status:
         student_subject = st.sidebar.text_input("Student Subject")
         
         @st.cache(allow_output_mutation=True)
-        def get_data():
+        def get_data_student():
             return []
             
         
-        df_students = pd.DataFrame(get_data())
+        df_students = pd.DataFrame(get_data_student())
         st.write("## Show Student Dataset")
         st.write(df_students)
         st.write(df_students.shape)
-        if st.button("Add Student"):
-            get_data().append({"Student_ID": student_id, 
+        if st.sidebar.button("Add Student"):
+            get_data_student().append({"Student_ID": student_id, 
                            "Student_Name": student_name, 
                            "Student_Phone": student_phone,
                            "Student_Email": student_email,
