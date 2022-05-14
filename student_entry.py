@@ -45,7 +45,7 @@ if authentication_status:
         df_admins = pd.DataFrame(get_data_admin())
         
         if st.sidebar.button("Add Admin"):
-            get_data_admin.append({"Admin_ID": admin_id, 
+            get_data_admin().append({"Admin_ID": admin_id, 
                            "Admin_Name": admin_name, 
                            "Admin_Phone": admin_phone})
         st.write("## Show Admin Dataset")
