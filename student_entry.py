@@ -48,10 +48,11 @@ if authentication_status:
             get_data_admin().append({"Admin_ID": admin_id, 
                            "Admin_Name": admin_name, 
                            "Admin_Phone": admin_phone})
-            st.write("New data is enter")
-        st.write("## Show Admin Dataset")
-        st.write(df_admins)
-        st.write(df_admins.shape)
+            st.write("## Show Admin Dataset")
+            st.write(df_admins)
+            st.write(df_admins.shape)
+        
+            
         
         
        #####convert df to csv and save it    ###
